@@ -6,6 +6,7 @@ project (mural)
 # version number
 set (MURAL_VERSION_MAJOR 1)
 set (MURAL_VERSION_MINOR 0)
+set (MURAL_VERSION_PATCH 0)
 
 # options
 option (MURAL_USE_MPI "Enable MPI for cluster configurations" OFF)
