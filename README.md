@@ -5,6 +5,7 @@
 ---
 
 ### Dependencies
+* CMake
 * GLFW
 * FreeType
 * MPI (optional)
