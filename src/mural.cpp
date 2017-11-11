@@ -1,18 +1,22 @@
-#include "config.h"
+#include "mural.h"
 
-#include <iostream>
-#ifdef MURAL_USE_MPI
-#include <mpi.h>
-#endif
+Mural::Mural() {
 
-int main(int argc, char** argv)
-{
-    int rc, rank, num_ranks;
+}
+
+Mural::~Mural() {
+
+}
+
+void Mural::Initialize(int argc, char **argv) {
+    int rc;
 #ifdef MURAL_USE_MPI
+    mpi_enabled = true;
     rc = MPI_Init(&argc, &argv);
     rc |= MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     rc |= MPI_Comm_size(MPI_COMM_WORLD, &num_ranks);
 #else
+    mpi_enabled = false;
     rc = 0;
     rank = 0;
     num_ranks = 1;
@@ -27,6 +31,4 @@ int main(int argc, char** argv)
     std::cout << "No MPI" << std::endl;
 #endif
     std::cout << "Number of Ranks: " << num_ranks << ", Rank: " << rank << std::endl;
-
-    return 0;
 }
