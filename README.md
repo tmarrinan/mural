@@ -7,5 +7,10 @@
 ### Dependencies
 * CMake
 * GLFW
+* An OpenGL Extension Library
+    * GLEW
+    * Glad
+    * Epoxy
+    * GLXW
 * FreeType
 * MPI (optional)

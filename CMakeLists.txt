@@ -18,7 +18,7 @@ set (MURAL_VERSION_PATCH ${PROJECT_VERSION_PATCH})
 # options
 option (MURAL_USE_MPI "Enable MPI for cluster configurations" OFF)
 set (OPENGL_ENTENSION_LIBRARY "GLEW" CACHE STRING "OpenGL extension library to configure MURAL to use")
-set_property (CACHE OPENGL_ENTENSION_LIBRARY PROPERTY STRINGS GLEW GLAD EPOXY)
+set_property (CACHE OPENGL_ENTENSION_LIBRARY PROPERTY STRINGS GLEW GLAD EPOXY GLXW)
 
 
 # configure a header file to pass CMake settings to the source code
