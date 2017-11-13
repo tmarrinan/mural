@@ -8,9 +8,10 @@
 * CMake
 * GLFW
 * An OpenGL Extension Library
-    * GLEW
+    * gl3w
     * Glad
-    * Epoxy
     * GLXW
+    * Epoxy
+    * GLEW
 * FreeType
 * MPI (optional)
